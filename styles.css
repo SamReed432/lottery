@@ -5,5 +5,42 @@ body {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	
 	text-align: center;
-	background-color: #FFFFFF;
+	background-color: #FFF490;
+	margin-bottom: 50px;
+	font-size: 25px;
+}
+
+h1 {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	text-decoration: underline;
+	font-style: italic;
+	animation: grow 2s;
+	font-size: 45px;
+}
+
+@keyframes grow {
+	0%{
+		font-size: 2px;
+	}
+
+	100%{
+		font-size: 45px;
+	}
+}
+
+#WinningMessage {
+	display: none;
+}
+
+h2 {
+	animation:spin 2s linear infinite;
+	color: #00FF30;
+	display: block;
+	margin:60px;
+}
+
+@keyframes spin { 
+    100% {
+        transform:rotate(360deg); 
+    } 
 }

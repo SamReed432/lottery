@@ -7,10 +7,11 @@
 </head>
 
 <body>
+	<h1>Lottery Sim</h1>
 <script language="javascript">
 	
 	pick = [Math.round(Math.random() * 48 + 1), Math.round(Math.random() * 48 + 1), Math.round(Math.random() * 48 + 1), Math.round(Math.random() * 48 + 1), Math.round(Math.random() * 48 + 1)];
-	document.write(pick + "<br>" );
+	document.write("Your Pick: " + pick + "<br>" );
 	pick = pick.sort(((a,b)=>a-b));
 	document.write("Your Pick Sorted: " +pick +"<br>");
 	
@@ -29,6 +30,9 @@
 	document.write("LuckyBall Match: " + (lucky == luckyBall) + "<br>");
 	
 	document.write("Payout: $" + payout(wins, (lucky == luckyBall)));
+	if(payout(wins, (lucky == luckyBall)) > 0){
+	   document.write("<h2>" + "You Win!" + "</h2>");
+	   }
 	
 	function check(pick, winning){
 		num = 0;
@@ -46,7 +50,6 @@
 		if (num == 5){
 			if(lucky){
 				return "7,000 a WEEK for LIFE";
-				body.style.backgroundColor = green;
 			} else {
 				return "25,000 a YEAR for LIFE";
 			}
@@ -69,7 +72,8 @@
 				return "3";
 			}
 		} else if ((num == 1) && (lucky)){
-				return "6";
+			return "6";
+
 		} else {
 			return "0";
 		}
